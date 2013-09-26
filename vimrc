@@ -68,6 +68,9 @@ map <Leader>a :call RunAllSpecs()<CR>
 " Markdown
 let g:vim_markdown_folding_disabled=1      " don't do folding
 
+" Treat hamlc as haml
+au BufRead,BufNewFile *.hamlc set ft=haml
+
 set statusline=%F%m%r%h%w\ 
 set statusline+=%{fugitive#statusline()}\    
 set statusline+=[%{strlen(&fenc)?&fenc:&enc}]

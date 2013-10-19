@@ -50,13 +50,32 @@ execute pathogen#infect()
 nmap <leader>p pV`]=
 nmap <leader>P PV`]=
 
-command! KillWhitespace :normal :%s/ *$//g<cr><c-o><cr>
+function! Preserve(command)
+  " Preparation: save last search, and cursor position.
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  " Do the business:
+  execute a:command
+  " Clean up: restore previous search history, and cursor position
+  let @/=_s
+  call cursor(l, c)
+endfunction
 
 " whitespace
 set nolist listchars=tab:·\ ,eol:¶,trail:·,extends:»,precedes:«
 nmap <silent> <leader>w :set nolist!<CR>
-nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>:retab<CR>
 
+function! <SID>StripTrailingWhitespaces()
+  call Preserve("%s/\\s\\+$//e")
+endfunction
+
+nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
+
+" strip whitespace on save
+autocmd BufWritePre *.rb,*.coffee,*.py,*.js :call <SID>StripTrailingWhitespaces()
+
+" theme
 colorscheme zenburn
 
 " Rspec.vim mappings
@@ -71,11 +90,11 @@ let g:vim_markdown_folding_disabled=1      " don't do folding
 " Treat hamlc as haml
 au BufRead,BufNewFile *.hamlc set ft=haml
 
-set statusline=%F%m%r%h%w\ 
-set statusline+=%{fugitive#statusline()}\    
+set statusline=%F%m%r%h%w\
+set statusline+=%{fugitive#statusline()}\
 set statusline+=[%{strlen(&fenc)?&fenc:&enc}]
-set statusline+=\ [line\ %l\/%L]          
-set statusline+=%{rvm#statusline()}  
+set statusline+=\ [line\ %l\/%L]
+set statusline+=%{rvm#statusline()}
 set laststatus=2
 
 set tags=./tags,tags,.git/tags

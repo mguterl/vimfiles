@@ -5,6 +5,7 @@ set encoding=utf-8
 set showcmd                     " display incomplete commands
 filetype plugin indent on       " load file type plugins + indentation
 set backupdir=~/tmp             " store backup files in one place
+set incsearch                   " do incremental searching
 
 "" Whitespace
 set nowrap                      " don't wrap lines

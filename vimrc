@@ -137,3 +137,9 @@ nnoremap <leader><leader> <c-^>
 imap <c-e> <c-o>$
 imap <c-a> <c-o>^
 
+" Disable Ex mode
+map Q <Nop>
+
+" Disable K looking stuff up
+map K <Nop>
+

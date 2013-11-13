@@ -130,3 +130,6 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
+" Switch between the last two files
+nnoremap <leader><leader> <c-^>
+

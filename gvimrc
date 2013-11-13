@@ -4,5 +4,5 @@ set guioptions-=L
 set guioptions-=T
 
 " Set default font
-set guifont=Inconsolata:h16
+set guifont=Source\ Code\ Pro:h14
 

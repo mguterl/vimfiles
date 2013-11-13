@@ -157,3 +157,6 @@ function! RenameFile()
 endfunction
 map <Leader>n :call RenameFile()<cr>
 
+map <C-s> :w<CR>
+imap <C-s> <esc>:w<CR>
+

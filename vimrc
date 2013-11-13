@@ -4,8 +4,12 @@ syntax enable
 set encoding=utf-8
 set showcmd                     " display incomplete commands
 filetype plugin indent on       " load file type plugins + indentation
-set backupdir=~/tmp             " store backup files in one place
 set incsearch                   " do incremental searching
+
+"" Keep backup and .swp files out of the working directory
+"" http://stackoverflow.com/a/15317146/86820
+set backupdir=~/tmp//
+set directory=~/tmp//
 
 "" Whitespace
 set nowrap                      " don't wrap lines

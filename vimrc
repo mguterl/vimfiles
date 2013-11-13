@@ -160,3 +160,5 @@ map <Leader>n :call RenameFile()<cr>
 map <C-s> :w<CR>
 imap <C-s> <esc>:w<CR>
 
+" Don't add the comment prefix when I hit enter or o/O on a comment line.
+set formatoptions-=or

@@ -133,3 +133,7 @@ endif
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
 
+" Emacs-like beginning and end of line.
+imap <c-e> <c-o>$
+imap <c-a> <c-o>^
+

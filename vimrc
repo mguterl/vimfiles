@@ -174,3 +174,6 @@ nnoremap <leader>c :bp\|bd #<CR>
 
 nnoremap <Leader>h :OpenHorizontal(alternate#FindAlternate())<CR>
 nnoremap <Leader>v :OpenVertical(alternate#FindAlternate())<CR>
+
+" Run the test for the current file
+autocmd FileType ruby   nnoremap <buffer> <Leader>r :execute "! rspec " . alternate#FindTest() <CR>

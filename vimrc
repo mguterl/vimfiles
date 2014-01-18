@@ -100,6 +100,7 @@ set statusline=%F%m%r%h%w\
 set statusline+=%{fugitive#statusline()}\
 set statusline+=[%{strlen(&fenc)?&fenc:&enc}]
 set statusline+=\ [line\ %l\/%L]
+set statusline+=\ [col\ %v]
 set laststatus=2
 
 set tags=./tags,tags,.git/tags

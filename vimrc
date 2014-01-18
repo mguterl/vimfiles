@@ -158,7 +158,13 @@ endfunction
 map <Leader>n :call RenameFile()<cr>
 
 map <C-s> :w<CR>
-imap <C-s> <esc>:w<CR>
+imap <C-s> <C-c>:w<CR>
 
 " Don't add the comment prefix when I hit enter or o/O on a comment line.
 set formatoptions-=or
+
+" Hitting Esc seems like poor ergonomics
+map <Esc> <Nop>
+imap <Esc> <Nop>
+vmap <Esc> <Nop>
+cmap <Esc> <Nop>

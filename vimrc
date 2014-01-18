@@ -168,3 +168,6 @@ map <Esc> <Nop>
 imap <Esc> <Nop>
 vmap <Esc> <Nop>
 cmap <Esc> <Nop>
+
+" delete buffer without losing the split window
+nnoremap <leader>c :bp\|bd #<CR>

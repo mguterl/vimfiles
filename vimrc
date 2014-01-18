@@ -171,3 +171,6 @@ cmap <Esc> <Nop>
 
 " delete buffer without losing the split window
 nnoremap <leader>c :bp\|bd #<CR>
+
+nnoremap <Leader>h :OpenHorizontal(alternate#FindAlternate())<CR>
+nnoremap <Leader>v :OpenVertical(alternate#FindAlternate())<CR>

@@ -43,3 +43,9 @@
 [submodule "bundle/handlebars"]
 	path = bundle/handlebars
 	url = git://github.com/nono/vim-handlebars.git
+[submodule "bundle/alternate"]
+	path = bundle/alternate
+	url = git@github.com:compactcode/alternate.vim.git
+[submodule "bundle/open"]
+	path = bundle/open
+	url = git@github.com:compactcode/open.vim.git

@@ -163,12 +163,6 @@ imap <C-s> <C-c>:w<CR>
 " Don't add the comment prefix when I hit enter or o/O on a comment line.
 set formatoptions-=or
 
-" Hitting Esc seems like poor ergonomics
-map <Esc> <Nop>
-imap <Esc> <Nop>
-vmap <Esc> <Nop>
-cmap <Esc> <Nop>
-
 " delete buffer without losing the split window
 nnoremap <leader>c :bp\|bd #<CR>
 

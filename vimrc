@@ -179,3 +179,7 @@ nnoremap <Leader>v :OpenVertical(alternate#FindAlternate())<CR>
 autocmd FileType ruby   nnoremap <buffer> <Leader>r :execute "! rspec " . alternate#FindTest() <CR>
 
 :nmap <silent> <leader>d <Plug>DashSearch
+" NERDTree
+map <C-n> :NERDTreeToggle<CR>
+" Close vim if NERDTree is the only window left open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif

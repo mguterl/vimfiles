@@ -84,6 +84,9 @@ autocmd BufWritePre *.rb,*.coffee,*.py,*.js :call <SID>StripTrailingWhitespaces(
 " theme
 colorscheme zenburn
 
+" rspec / tmux integration
+let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
+
 " Rspec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>

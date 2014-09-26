@@ -1,5 +1,13 @@
-" http://mislav.uniqpath.com/2011/12/vim-revisited/
 set nocompatible                " choose no compatibility with legacy vi
+
+" Required Vundle setup
+filetype off
+set runtimepath+=~/.vim/bundle/vundle
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+" http://mislav.uniqpath.com/2011/12/vim-revisited/
 syntax enable
 set encoding=utf-8
 set showcmd                     " display incomplete commands
@@ -47,7 +55,26 @@ set splitright
 " turn on line numbers
 set number
 
-execute pathogen#infect()
+Bundle 'rking/ag.vim'
+Bundle 'compactcode/alternate.vim'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'tpope/vim-commentary'
+Bundle 'kien/ctrlp.vim'
+Bundle 'tpope/vim-cucumber'
+Bundle 'mengbo/vim-dash'
+Bundle 'tpope/vim-fugitive'
+Bundle 'rizzatti/funcoo.vim'
+Bundle 'tpope/vim-haml'
+Bundle 'nono/vim-handlebars'
+Bundle 'plasticboy/vim-markdown'
+Bundle 'compactcode/open.vim'
+Bundle 'tpope/vim-rails'
+Bundle 'thoughtbot/vim-rspec'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-rvm'
+Bundle 'jgdavey/tslime.vim'
+Bundle 'tpope/vim-surround'
+Bundle 'christoomey/vim-tmux-navigator'
 
 " clear the search buffer when hitting return
 :nnoremap <CR> :nohlsearch<cr>

@@ -47,7 +47,6 @@ set splitright
 " turn on line numbers
 set number
 
-execute pathogen#infect()
 
 " clear the search buffer when hitting return
 :nnoremap <CR> :nohlsearch<cr>

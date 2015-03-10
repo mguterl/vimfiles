@@ -190,9 +190,6 @@ map <Leader>n :call RenameFile()<cr>
 map <C-s> :w<CR>
 imap <C-s> <C-c>:w<CR>
 
-" Don't add the comment prefix when I hit enter or o/O on a comment line.
-set formatoptions-=or
-
 " delete buffer without losing the split window
 nnoremap <leader>c :bp\|bd #<CR>
 

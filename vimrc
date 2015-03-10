@@ -6,6 +6,29 @@ set runtimepath+=~/.vim/bundle/vundle
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'rking/ag.vim'
+Bundle 'compactcode/alternate.vim'
+Bundle 'tpope/vim-commentary'
+Bundle 'kien/ctrlp.vim'
+Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-fugitive'
+Bundle 'rizzatti/funcoo.vim'
+Bundle 'tpope/vim-haml'
+Bundle 'nono/vim-handlebars'
+Bundle 'compactcode/open.vim'
+Bundle 'tpope/vim-rails'
+Bundle 'thoughtbot/vim-rspec'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-rvm'
+Bundle 'jgdavey/tslime.vim'
+Bundle 'tpope/vim-surround'
+Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'scrooloose/nerdtree'
+Bundle 'mxw/vim-jsx'
+Bundle 'rizzatti/dash.vim'
+Bundle 'mattn/emmet-vim'
+Bundle 'jszakmeister/vim-togglecursor'
 
 " http://mislav.uniqpath.com/2011/12/vim-revisited/
 syntax enable
@@ -54,27 +77,6 @@ set splitright
 
 " turn on line numbers
 set number
-
-Bundle 'rking/ag.vim'
-Bundle 'compactcode/alternate.vim'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'tpope/vim-commentary'
-Bundle 'kien/ctrlp.vim'
-Bundle 'tpope/vim-cucumber'
-Bundle 'mengbo/vim-dash'
-Bundle 'tpope/vim-fugitive'
-Bundle 'rizzatti/funcoo.vim'
-Bundle 'tpope/vim-haml'
-Bundle 'nono/vim-handlebars'
-Bundle 'plasticboy/vim-markdown'
-Bundle 'compactcode/open.vim'
-Bundle 'tpope/vim-rails'
-Bundle 'thoughtbot/vim-rspec'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-rvm'
-Bundle 'jgdavey/tslime.vim'
-Bundle 'tpope/vim-surround'
-Bundle 'christoomey/vim-tmux-navigator'
 
 " clear the search buffer when hitting return
 :nnoremap <CR> :nohlsearch<cr>
@@ -200,3 +202,13 @@ nnoremap <Leader>v :OpenVertical(alternate#FindAlternate())<CR>
 autocmd FileType ruby   nnoremap <buffer> <Leader>r :execute "! rspec " . alternate#FindTest() <CR>
 
 :nmap <silent> <leader>d <Plug>DashSearch
+
+" Open NERDTree if no files are specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" Toggle NERDTree
+map <C-n> :NERDTreeToggle<CR>
+
+" Show hidden files
+let NERDTreeShowHidden=1

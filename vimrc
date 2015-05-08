@@ -29,6 +29,9 @@ Bundle 'mxw/vim-jsx'
 Bundle 'rizzatti/dash.vim'
 Bundle 'mattn/emmet-vim'
 Bundle 'jszakmeister/vim-togglecursor'
+Bundle 'pangloss/vim-javascript'
+Bundle 'tpope/vim-endwise'
+Bundle 'itspriddle/vim-marked'
 
 " http://mislav.uniqpath.com/2011/12/vim-revisited/
 syntax enable

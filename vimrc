@@ -212,3 +212,11 @@ map <C-n> :NERDTreeToggle<CR>
 
 " Show hidden files
 let NERDTreeShowHidden=1
+
+" Resize splits with mouse in tmux
+" http://superuser.com/a/550482
+set mouse+=a
+if &term =~ '^screen'
+    " tmux knows the extended mouse mode
+    set ttymouse=xterm2
+endif

@@ -221,6 +221,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_ruby_checkers = ["mri", "rubocop"]
+let g:syntastic_cucumber_checkers = []
 
 " Open NERDTree if no files are specified
 autocmd StdinReadPre * let s:std_in=1

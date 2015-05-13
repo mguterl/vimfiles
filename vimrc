@@ -32,6 +32,7 @@ Bundle 'jszakmeister/vim-togglecursor'
 Bundle 'pangloss/vim-javascript'
 Bundle 'tpope/vim-endwise'
 Bundle 'itspriddle/vim-marked'
+Bundle 'scrooloose/syntastic'
 
 " http://mislav.uniqpath.com/2011/12/vim-revisited/
 syntax enable
@@ -209,6 +210,17 @@ nnoremap <Leader>v :OpenVertical(alternate#FindAlternate())<CR>
 autocmd FileType ruby   nnoremap <buffer> <Leader>r :execute "! rspec " . alternate#FindTest() <CR>
 
 :nmap <silent> <leader>d <Plug>DashSearch
+
+" syntastic configuration
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_ruby_checkers = ["mri", "rubocop"]
 
 " Open NERDTree if no files are specified
 autocmd StdinReadPre * let s:std_in=1

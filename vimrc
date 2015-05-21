@@ -33,6 +33,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'tpope/vim-endwise'
 Bundle 'itspriddle/vim-marked'
 Bundle 'scrooloose/syntastic'
+Bundle 'milkypostman/vim-togglelist'
 
 " http://mislav.uniqpath.com/2011/12/vim-revisited/
 syntax enable
@@ -241,3 +242,6 @@ if &term =~ '^screen'
     " tmux knows the extended mouse mode
     set ttymouse=xterm2
 endif
+
+nmap <script> <silent> <leader>l :call ToggleLocationList()<CR>
+nmap <script> <silent> <leader>q :call ToggleQuickfixList()<CR>

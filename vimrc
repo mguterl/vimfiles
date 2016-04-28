@@ -15,7 +15,6 @@ Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-fugitive'
 Bundle 'rizzatti/funcoo.vim'
 Bundle 'tpope/vim-haml'
-Bundle 'nono/vim-handlebars'
 Bundle 'compactcode/open.vim'
 Bundle 'tpope/vim-rails'
 Bundle 'thoughtbot/vim-rspec'
@@ -33,6 +32,8 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'tpope/vim-endwise'
 Bundle 'itspriddle/vim-marked'
 Bundle 'scrooloose/syntastic'
+Bundle 'elixir-lang/vim-elixir'
+Bundle 'mustache/vim-mustache-handlebars'
 
 " http://mislav.uniqpath.com/2011/12/vim-revisited/
 syntax enable
@@ -224,6 +225,8 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ["eslint"]
 let g:syntastic_ruby_checkers = ["mri", "rubocop"]
 let g:syntastic_cucumber_checkers = []
+let g:syntastic_filetype_map = { 'html.handlebars': 'handlebars' }
+let g:syntastic_handlebars_checkers = ["handlebars"]
 
 " Open NERDTree if no files are specified
 autocmd StdinReadPre * let s:std_in=1

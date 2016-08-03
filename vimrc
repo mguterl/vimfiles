@@ -117,7 +117,7 @@ autocmd BufWritePre *.rb,*.coffee,*.py,*.js :call <SID>StripTrailingWhitespaces(
 
 " theme
 let g:pencil_higher_contrast_ui=1
-colorscheme pencil
+colorscheme zenburn
 
 " rspec / tmux integration
 let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'

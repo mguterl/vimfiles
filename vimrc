@@ -2,7 +2,6 @@ set nocompatible                " choose no compatibility with legacy vi
 
 " Required Vundle setup
 filetype off
-Bundle 'thoughtbot/vim-rspec'
 set runtimepath+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -34,6 +33,7 @@ Plugin 'itspriddle/vim-marked'
 Plugin 'scrooloose/syntastic'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'janko-m/vim-test'
 
 call vundle#end()
 
@@ -121,14 +121,13 @@ autocmd BufWritePre *.rb,*.coffee,*.py,*.js :call <SID>StripTrailingWhitespaces(
 let g:pencil_higher_contrast_ui=1
 colorscheme zenburn
 
-" rspec / tmux integration
-let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
-
-" Rspec.vim mappings
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
+" vim-test
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>
+let g:test#ruby#minitest#executable = 'm'
 
 " Markdown
 let g:vim_markdown_folding_disabled=1      " don't do folding

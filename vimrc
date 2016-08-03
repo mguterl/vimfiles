@@ -2,38 +2,40 @@ set nocompatible                " choose no compatibility with legacy vi
 
 " Required Vundle setup
 filetype off
-set runtimepath+=~/.vim/bundle/vundle
-call vundle#rc()
-
-Bundle 'VundleVim/Vundle.vim'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'rking/ag.vim'
-Bundle 'compactcode/alternate.vim'
-Bundle 'tpope/vim-commentary'
-Bundle 'kien/ctrlp.vim'
-Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-fugitive'
-Bundle 'rizzatti/funcoo.vim'
-Bundle 'tpope/vim-haml'
-Bundle 'compactcode/open.vim'
-Bundle 'tpope/vim-rails'
 Bundle 'thoughtbot/vim-rspec'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-rvm'
-Bundle 'jgdavey/tslime.vim'
-Bundle 'tpope/vim-surround'
-Bundle 'christoomey/vim-tmux-navigator'
-Bundle 'scrooloose/nerdtree'
-Bundle 'mxw/vim-jsx'
-Bundle 'rizzatti/dash.vim'
-Bundle 'mattn/emmet-vim'
-Bundle 'jszakmeister/vim-togglecursor'
-Bundle 'pangloss/vim-javascript'
-Bundle 'tpope/vim-endwise'
-Bundle 'itspriddle/vim-marked'
-Bundle 'scrooloose/syntastic'
-Bundle 'elixir-lang/vim-elixir'
-Bundle 'mustache/vim-mustache-handlebars'
+set runtimepath+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'rking/ag.vim'
+Plugin 'compactcode/alternate.vim'
+Plugin 'tpope/vim-commentary'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-cucumber'
+Plugin 'tpope/vim-fugitive'
+Plugin 'rizzatti/funcoo.vim'
+Plugin 'tpope/vim-haml'
+Plugin 'compactcode/open.vim'
+Plugin 'tpope/vim-rails'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-rvm'
+Plugin 'jgdavey/tslime.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'scrooloose/nerdtree'
+Plugin 'mxw/vim-jsx'
+Plugin 'rizzatti/dash.vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'jszakmeister/vim-togglecursor'
+Plugin 'pangloss/vim-javascript'
+Plugin 'tpope/vim-endwise'
+Plugin 'itspriddle/vim-marked'
+Plugin 'scrooloose/syntastic'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'mustache/vim-mustache-handlebars'
+
+call vundle#end()
 
 " http://mislav.uniqpath.com/2011/12/vim-revisited/
 syntax enable

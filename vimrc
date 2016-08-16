@@ -128,6 +128,8 @@ nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 let g:test#ruby#minitest#executable = 'm'
+let g:test#ruby#m#file_pattern = '\v(_spec\.rb|_test\.rb)$'
+let g:test#strategy = 'tslime'
 
 " Markdown
 let g:vim_markdown_folding_disabled=1      " don't do folding
